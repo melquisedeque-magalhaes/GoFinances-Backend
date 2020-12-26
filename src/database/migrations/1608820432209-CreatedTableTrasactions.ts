@@ -22,16 +22,13 @@ export default class CreatedTableTrasactions1608820432209
           },
           {
             name: 'value',
-            type: 'number',
+            type: 'decimal',
+            precision: 10,
+            scale: 2,
           },
           {
             name: 'type',
             type: 'varchar',
-          },
-          {
-            name: 'category_id',
-            type: 'uuid',
-            isNullable: true,
           },
           {
             name: 'created_at',
