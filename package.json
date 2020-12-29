@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://melquisedeque-magalhaes.github.io/GoFinances-GoStack/",
   "scripts": {
     "build": "tsc",
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
-    "start": "ts-node src/index.ts",
+    "start": "ts-node dist/server.js",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@types/csv-parse": "^1.2.2",
+    "@vercel/node": "^1.8.5",
     "cors": "^2.8.5",
     "csv-parse": "^4.8.8",
     "dotenv": "^8.2.0",
